@@ -60,7 +60,7 @@ def data_feature_engineering(df, loc_borough_map):
         # borough mapping
         .assign(PU_Borough=lambda x: x['PULocationID'].map(loc_borough_map))
         .assign(DO_Borough=lambda x: x['DOLocationID'].map(loc_borough_map))
-        .astype({'PULocationID': 'category', 'DOLocationID': 'category'})
+        .astype({'PU_Borough': 'category', 'DO_Borough': 'category'})
     )
     return df
 
